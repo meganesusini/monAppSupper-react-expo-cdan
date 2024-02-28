@@ -2,10 +2,13 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import { ExternalLink } from './ExternalLink';
-import { MonoText } from './StyledText';
+import { MonoText, Red, Button } from './StyledText';
 import { Text, View } from './Themed';
 
 import Colors from '@/constants/Colors';
+import { MySectionList } from './MySectionList';
+import { App, ButtonClic, ExoUseEffect, Func, Increment, ListData, ShoppingList } from './app.component';
+
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
@@ -15,8 +18,17 @@ export default function EditScreenInfo({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen:
+          <Red>Open up the code for this screen:</Red>
         </Text>
+        {/* <View><Button></Button></View>  
+        <View><ButtonClic></ButtonClic></View>      
+        <View><Func></Func></View>   
+        <ListData></ListData>   
+        <Increment></Increment> */}
+        <Text>My Shopping List :</Text>
+        <ShoppingList></ShoppingList>
+        <ExoUseEffect></ExoUseEffect>
+        <App></App>
 
         <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
@@ -42,6 +54,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
           </Text>
         </ExternalLink>
       </View>
+      {/* <MySectionList></MySectionList> */}
     </View>
   );
 }
