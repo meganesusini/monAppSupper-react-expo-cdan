@@ -14,33 +14,42 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          <Red>Open up the code for this screen:</Red>
-        </Text>
-        {/* <View><Button></Button></View>  
-        <View><ButtonClic></ButtonClic></View>      
-        <View><Func></Func></View>   
-        <ListData></ListData>   
-        <Increment></Increment> */}
-        <Text>My Shopping List :</Text>
-        <ShoppingList></ShoppingList>
-        <ExoUseEffect></ExoUseEffect>
+        {/* Texte en rouge */}
+        {/* <Text
+          style={styles.getStartedText}>Affichage du texte en rouge : 
+          <Red> Open up the code for this screen:</Red>
+        </Text> */}
+        {/* Affichage d'un bouton  */}
+        {/* <View>
+          <Text>Affichage d'un bouton</Text>
+          <Button></Button>
+        </View>   */}
+        {/* Bouton 'Clic to say Hello' */}
+        {/* <View>
+          <ButtonClic></ButtonClic>
+        </View>       */}
+        {/* Affiche 'Error', 'Loading', 'Title' */}
+        {/* <View>
+          <Func></Func>
+        </View>    */}
+        {/* Affiche des données  */}
+        {/* <ListData></ListData>    */}
+        {/* Fonction qui incrémente un nombre */}
+        {/* <Increment></Increment> */}
+        {/* Affiche une liste de course  */}
+        {/* <Text>My Shopping List :</Text>
+        <ShoppingList></ShoppingList> */}
+        {/* Charge du contenu  */}
+        {/* <ExoUseEffect></ExoUseEffect> */}
         <App></App>
 
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
+        {/* <View
+          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
           <MonoText>{path}</MonoText>
-        </View>
+        </View> */}
 
         <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
+          style={styles.getStartedText}>
           Change any of the text, save the file, and your app will automatically update.
         </Text>
       </View>
@@ -49,7 +58,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
         <ExternalLink
           style={styles.helpLink}
           href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
+          <Text style={styles.helpLinkText}>
             Tap here if your app doesn't automatically update after making changes
           </Text>
         </ExternalLink>

@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+// Button to say Hello 
 function HelloButton({ title, sayHello } : { title : string, sayHello : any }) {
     return <Button title={title} onPress={sayHello}></Button>
 }
-  
 export function ButtonClic() {
     return (
         <HelloButton
@@ -18,6 +18,7 @@ export function ButtonClic() {
     )
 }
 
+// Affichage de error, loading, title 
 const Card = ({ loading, error, title } : { loading? : boolean, error? : boolean, title? : string}) => {
     let content 
 
@@ -34,10 +35,8 @@ const Card = ({ loading, error, title } : { loading? : boolean, error? : boolean
             </View>
         )
     }
-
     return <View style={{ padding : 24}}>{content}</View>
 }
-
 export function Func() {
     return (
         <View>
@@ -48,12 +47,12 @@ export function Func() {
     )
 }
 
+// Affichage des données (data2)
 const data2 = [
     { id: 'a', name: 'Devin'},
     { id: 'b', name: 'Gabe'},
     { id: 'c', name: 'Kim'}
 ]
-
 export function ListData() {
     return (
         <View>
@@ -64,6 +63,7 @@ export function ListData() {
     );
 }
 
+// Fonction qui incrémente un nombre 
 export function Increment() {
     let [compteur, setCompteur] = useState(0);
     let updateCompteur = useRef(0);
@@ -94,6 +94,7 @@ export function Increment() {
     )
 }
 
+// Affichage d'une liste de course 
 export function ShoppingList() {
     const inputRef = useRef();
     const [isFormValidated, setFormValidation] = useState(false);
@@ -126,7 +127,7 @@ export function ShoppingList() {
       </> );
   }
 
-
+// Charge du contenu 
 export function ExoUseEffect() {
     const [isLoading, setIsLoading] = useState(true);
 
@@ -145,7 +146,7 @@ export function ExoUseEffect() {
     );
 }
 
-
+// Affiche un compteur 
 export function useInterval(callback:any, delay:any) {
     const savedCallback = useRef()
     // Remember the latest callback.
@@ -170,22 +171,3 @@ export function useInterval(callback:any, delay:any) {
     }, 1000)
     return <Text style={{ fontSize: 120 }}>{count}</Text>
   }
-  
-
-//   export function StackNav({navigation}) {
-    
-//     return (
-//         <View>
-//             <Button title="Go to HelloScreen" onPress={() => navigation.navigate('Hello')}/>
-//         </View>
-//     )
-// }
-
-// function HelloScreen({route, navigation}) {
-//     return (
-//       <View>
-//         <Text>Hello!</Text>
-//       </View>
-//     );
-//   }
-
