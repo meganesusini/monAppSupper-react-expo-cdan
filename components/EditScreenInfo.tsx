@@ -9,47 +9,50 @@ import Colors from '@/constants/Colors';
 import { MySectionList } from './MySectionList';
 import { App, ButtonClic, ExoUseEffect, Func, Increment, ListData, ShoppingList } from './app.component';
 import { ThemeButtons } from './themeButtons';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
+    <ScrollView>
     <View>
       <View style={styles.getStartedContainer}>
+
+      
         {/* Texte en rouge */}
-        {/* <Text
+        <Text
           style={styles.getStartedText}>Affichage du texte en rouge : 
           <Red> Open up the code for this screen:</Red>
-        </Text> */}
+        </Text>
         {/* Affichage d'un bouton  */}
-        {/* <View>
+        <View>
           <Text>Affichage d'un bouton</Text>
           <Button></Button>
-        </View>   */}
+        </View>  
         {/* Bouton 'Clic to say Hello' */}
-        {/* <View>
+        <View>
           <ButtonClic></ButtonClic>
-        </View>       */}
+        </View>      
         {/* Affiche 'Error', 'Loading', 'Title' */}
-        {/* <View>
+        <View>
           <Func></Func>
-        </View>    */}
+        </View>   
         {/* Affiche des données  */}
-        {/* <ListData></ListData>    */}
+        <ListData></ListData>   
         {/* Fonction qui incrémente un nombre */}
-        {/* <Increment></Increment> */}
+        <Increment></Increment>
         {/* Affiche une liste de course  */}
-        {/* <Text>My Shopping List :</Text>
-        <ShoppingList></ShoppingList> */}
+        <Text>My Shopping List :</Text>
+        <ShoppingList></ShoppingList>
         {/* Charge du contenu  */}
-        {/* <ExoUseEffect></ExoUseEffect> */}
-        {/* <App></App> */}
-        {/* <ThemeButtons></ThemeButtons> */}
+        <ExoUseEffect></ExoUseEffect>
+        <App></App>
+        <ThemeButtons></ThemeButtons>
 
         {/* <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
           <MonoText>{path}</MonoText>
         </View> */}
-
         <Text
           style={styles.getStartedText}>
           Change any of the text, save the file, and your app will automatically update.
@@ -67,6 +70,8 @@ export default function EditScreenInfo({ path }: { path: string }) {
       </View>
       <MySectionList></MySectionList>
     </View>
+    </ScrollView>
+
   );
 }
 
