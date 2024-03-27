@@ -3,10 +3,11 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useColorScheme } from '@/components/useColorScheme';
-import themes from '@/constants/Themes';
+import Themes from '@/constants/Themes';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -46,10 +47,25 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  async function getThemeName(): Promise<string> {
+    try {
+      const value = await AsyncStorage.getItem('themeName')
+      if(value !== null) {
+        return value;
+      } else { throw new Error(); }
+    } catch(e) {
+      // error reading value
+      throw new Error();
+    }
+  }
+
+  let [currentTheme, setTheme] = useState(Themes.light);
+  useEffect(() => {getThemeName().then((th:string)=>{
+    setTheme(Themes[th])})
+  })
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? themes.dark : themes.light}>
+    <ThemeProvider value={currentTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal' }} />

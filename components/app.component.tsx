@@ -171,3 +171,5 @@ export function useInterval(callback:any, delay:any) {
     }, 1000)
     return <Text style={{ fontSize: 120 }}>{count}</Text>
   }
+
+  //

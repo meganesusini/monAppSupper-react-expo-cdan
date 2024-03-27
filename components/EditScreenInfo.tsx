@@ -8,6 +8,7 @@ import { Text, View } from './Themed';
 import Colors from '@/constants/Colors';
 import { MySectionList } from './MySectionList';
 import { App, ButtonClic, ExoUseEffect, Func, Increment, ListData, ShoppingList } from './app.component';
+import { ThemeButtons } from './themeButtons';
 
 
 export default function EditScreenInfo({ path }: { path: string }) {
@@ -41,7 +42,8 @@ export default function EditScreenInfo({ path }: { path: string }) {
         <ShoppingList></ShoppingList> */}
         {/* Charge du contenu  */}
         {/* <ExoUseEffect></ExoUseEffect> */}
-        <App></App>
+        {/* <App></App> */}
+        {/* <ThemeButtons></ThemeButtons> */}
 
         {/* <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
@@ -63,7 +65,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
           </Text>
         </ExternalLink>
       </View>
-      {/* <MySectionList></MySectionList> */}
+      <MySectionList></MySectionList>
     </View>
   );
 }
