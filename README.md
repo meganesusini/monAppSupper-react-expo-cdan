@@ -1,6 +1,8 @@
 ** Etapes pour lancer le TP **
-1. Dans le terminal, pour démarre le server : npm start
-2. Ctrl + Clic sur le localhost ou w pour afficher l'application dans le navigateur
+1. Installer NodeJs.
+2. Pour récupérer le projet : cloner le projet (git clone).
+3. Dans le terminal, pour démarrer le server : npm start
+4. Ctrl + Clic sur le localhost ou w pour afficher l'application dans le navigateur
 
 
 ** Affichage des exercices **
